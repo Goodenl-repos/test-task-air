@@ -1,0 +1,65 @@
+.learn-more
+  position: relative
+
+  &__row
+    display: flex
+    justify-content: center
+    align-content: center
+    gap: 0 10.2rem
+    padding-top: 10.8rem
+
+  &__card
+    max-width: 50.4rem
+    max-height: 62.4rem
+
+    border-radius: 3.8rem
+    overflow: hidden
+
+    position: relative
+
+    &:after
+      @extend .after-darken
+
+    &:first-child
+      rotate: -4.72deg
+      
+      img
+        transform: translate(-200px, 0)
+
+    &:last-child
+      rotate: 3.68deg
+      top: 7.853rem
+
+      img
+        height: 102%
+        transform: translate(-320px, -6px)
+
+  &__img
+    height: 100%
+    object-fit: cover
+
+  &__text
+    display: flex
+    flex-direction: column
+    gap: 2rem 0
+    padding: 0 8.6rem 6.4rem 5.1rem
+
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: 1
+
+    > h3
+      @extend .h2
+      color: var(--color-white)
+      font-size: 8.3rem
+
+    > p
+      line-height: 1.41
+      color: var(--color-white)
+  
+  &__bg
+    position: absolute
+    z-index: 3
+    right: -2.5rem
+    bottom: 0

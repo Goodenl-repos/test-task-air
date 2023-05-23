@@ -19,7 +19,7 @@
 
 .section
   scroll-snap-align: start
-  height: 100%
+  height: 100vh
   padding-bottom: 2.3rem
 
 // extends
@@ -74,3 +74,18 @@
     line-height: 1.345
     white-space: pre
     letter-spacing: 0.04em
+
+.after-darken
+  content: ''
+  background: rgba(var(--color-black-rgb),0.25)
+  
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 0
+
+.after-darken-gradient
+  @extend .after-darken
+  background: linear-gradient(355deg, rgba(var(--color-black-rgb),0.5) 0%, rgba(var(--color-black-rgb),0) 50%, rgba(var(--color-black-rgb),0.5) 100%)
