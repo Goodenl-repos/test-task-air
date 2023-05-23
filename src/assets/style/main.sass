@@ -7,8 +7,13 @@
 @import 'general'
 
 // blocks
-@import 'blocks/page'
 @import 'blocks/header'
+@import 'blocks/nav'
+@import 'blocks/logo'
+@import 'blocks/star-card'
+// blocks sections
+@import 'blocks/intro'
+@import 'blocks/appeal'
 
 // other code
 *
@@ -25,11 +30,7 @@ body
   font-size: 2rem
 
 a
-  color: var(--color-black)
-  font-family: 'Inter'
-  font-size: 1.6rem
-  line-height: 1.625
-  font-weight: 400
-  letter-spacing: 1px
+  color: var(--color-dark)
+  @extend .link
   
   cursor: pointer

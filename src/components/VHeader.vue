@@ -2,10 +2,10 @@
   <!-- Header -->
   <div class="header">
     <!-- all header navigation -->
-    <div class="header_nav">
+    <div class="header__nav">
       <div class="logo">
-        <img src="/images/air-logo.svg" alt="Royalty">
-        <h1 class="h1">Royalty</h1>
+        <img class="logo__icon" src="/images/icons/air-logo.svg" alt="Royalty">
+        <h2 class="logo__title">Royalty</h2>
       </div>
 
       <nav class="nav">
@@ -18,7 +18,7 @@
       </nav>
     </div>
     <!-- ./all header navigation -->
-    
+
     <button class="btn btn--header">
       Launch platform
     </button>

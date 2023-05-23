@@ -1,0 +1,78 @@
+.star-card
+  width: 27.2rem
+  max-height: 32.5rem
+
+  font-family: 'Inter'
+  color: var(--color-white)
+  line-height: 1.3
+  
+  cursor: pointer
+  border-radius: 2.8rem
+  overflow: hidden
+
+  position: relative
+
+
+  &:after
+    content: ''
+    background: linear-gradient(355deg, rgba(var(--color-black-rgb),0.5) 0%, rgba(var(--color-black-rgb),0) 50%, rgba(var(--color-black-rgb),0.5) 100%)
+    
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 0
+
+  &__star
+    display: flex
+    flex-direction: column
+    gap: .61rem 0
+
+    position: absolute
+    top: 2.4rem
+    left: 3rem
+
+    z-index: 1
+
+  &__name
+    font-weight: 500
+    font-size: 3rem
+
+  &__subscribers
+    font-size: 1.08rem
+    letter-spacing: 0.05em
+    text-transform: uppercase
+
+  &__img
+    object-fit: contain
+
+  &__info
+    display: inline-flex
+    flex-direction: column
+    gap: 0.38rem 0
+
+    text-transform: uppercase
+
+    position: absolute
+    bottom: 2.32rem
+    left: 2.753rem
+
+    z-index: 1
+
+    &:last-child
+      left: auto
+      right: 2.8rem
+  
+  &__label
+    font-size: .97rem
+    letter-spacing: 0.06em
+  
+  &__value
+    font-family: Roboto
+    font-size: 2.169rem
+    font-weight: 500
+
+  &__row
+    display: flex
+    gap: 0 2.386rem
