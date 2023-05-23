@@ -16,29 +16,58 @@
     overflow: hidden
 
     position: relative
+    cursor: none
+
+    transition: .3s all ease
 
     &:after
-      @extend .after-darken
+      content: ''
+
+      position: absolute
+      
+      bottom: 0
+      top: 0
+      right: 0
+      left: 0
+      // @extend .after-darken
 
     &:first-child
-      rotate: -4.72deg
+      --need-rotate: 4.72deg
+      rotate: calc(var(--need-rotate) * -1)
+
+      .learn-more__cursor
+        rotate: var(--need-rotate)
       
       img
         transform: translate(-270px, -10px)
 
     &:last-child
-      rotate: 3.68deg
+      --need-rotate: 3.68deg
+      rotate: var(--need-rotate)
       top: 7.853rem
+
+      .learn-more__cursor
+        rotate: calc(var(--need-rotate) * -1)
 
       .learn-more__text
         padding-bottom: 4.7rem
 
       img
         transform: translate(-360px, -20px)
+    
+    &:hover
+      --need-rotate: 0deg
+
+      &:first-child
+        transform: translate(0, -4rem)
+
+      &:last-child
+        transform: translate(0, -8rem)
 
   &__img
     height: 110%
     object-fit: cover
+    filter: brightness(0.75)
 
   &__text
     display: flex
@@ -49,7 +78,7 @@
     position: absolute
     left: 0
     bottom: 0
-    z-index: 1
+    z-index: 0
 
     > h3
       @extend .h2
@@ -65,3 +94,26 @@
     z-index: 3
     right: -7rem
     bottom: -8rem
+
+  &__cursor
+    display: none
+    width: 13.9rem
+    height: 13.9rem
+    padding: 4.6rem .8rem 3.9rem
+
+    line-height: 1.345
+    font-weight: 500
+    text-align: center
+    text-transform: uppercase
+
+    background-color: var(--color-accent)
+    border-radius: 100%
+
+    position: absolute
+    top: 0
+
+    pointer-events: none
+    z-index: 1000
+
+    &.show
+      display: block
