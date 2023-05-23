@@ -1,0 +1,52 @@
+.achievement
+  &__row
+    transform: rotate(-5.03deg)
+    overflow: scroll
+
+    width: calc(100% + 15rem)
+
+    position: absolute
+    left: -10rem
+    bottom: 9rem
+
+    &::-webkit-scrollbar
+      display: none
+
+  &__list
+    display: inline-flex
+    padding: 4.5rem 0 4.67rem
+    gap: 0 5.4rem
+    height: 100%
+
+    overflow: hidden
+
+    background-color: var(--color-black)
+
+  &__item
+    display: flex
+    align-items: center
+    gap: 0 3.7rem
+
+  &__img
+    width: 19.2rem
+    height: 13.1rem
+    border-radius: 65px
+    object-fit: cover
+
+  &__text
+    display: flex
+    flex-direction: column
+
+    text-align: start
+    white-space: pre
+
+    color: var(--color-white)
+
+  &__title
+    font-size: 8.4rem
+    line-height: .96
+    font-weight: 700
+
+  &__subtitle
+    font-size: 2.77rem
+    font-weight: 400
