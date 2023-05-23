@@ -3,7 +3,7 @@
   <div class="intro section container">
     <VHeader />
     <div class="intro__main">
-      <img class="intro__bg" src="/images/bg-star.svg" alt="Background star">
+      <img class="intro__bg" src="/images/bg/bg-star.svg" alt="Background star">
 
       <h1 class="intro__title">
         Empowering Every Creator Connecting Every Fan
