@@ -12,9 +12,8 @@
 
 <script setup>
 import StarCard from '@/components/StarCard.vue'
-import { reactive } from 'vue'
 
-const starList = reactive([
+const starList = [
   {
     name: 'Monatik',
     imgName: 'star-1'
@@ -27,6 +26,6 @@ const starList = reactive([
     name: 'Anna Trincher',
     imgName: 'star-3'
   },
-])
+]
 
 </script>
