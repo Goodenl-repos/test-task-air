@@ -117,7 +117,7 @@ onMounted(() => {
     duration: 25,
     
     onStart: () => {
-      introBg.src = '/images/bg/star-bg_animated.svg'
+      introBg.src = '/bg/star-bg_animated.svg'
     }
   }, 'introMain')
   .to(introBg, {

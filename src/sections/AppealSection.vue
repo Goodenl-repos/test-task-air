@@ -76,7 +76,7 @@ onMounted(() => {
       start: '0% 20%',
       end: 'top -80%',
       onEnter: () => {
-        appealBg.src = "/images/bg/curve-bg_animated.svg"
+        appealBg.src = "/bg/curve-bg_animated.svg"
       },
     }
   })

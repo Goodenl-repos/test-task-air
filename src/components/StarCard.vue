@@ -9,7 +9,7 @@
       <span class="star-card__subscribers">1 Mil subscribers</span>
     </div>
 
-    <img class="star-card__img" :src="`/images/stars/${star.imgName}-card.png`" :alt="star.imgName">
+    <img class="star-card__img" :src="`/stars/${star.imgName}-card.png`" :alt="star.imgName">
 
     <div class="star-card__info">
       <span class="star-card__label">Market price</span>

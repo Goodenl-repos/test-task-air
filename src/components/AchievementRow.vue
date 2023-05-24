@@ -3,7 +3,7 @@
   <div class="achievement__row">
     <ul class="achievement__list">
       <li v-for="achievement in achievementList" :class="`achievement__item ${achievement.class}`">
-        <img :src="`images/achievements/achievement-${achievement.imgName}.png`" :alt="achievement.title" class="achievement__img">
+        <img :src="`/images/achievements/achievement-${achievement.imgName}.png`" :alt="achievement.title" class="achievement__img">
         <div class="achievement__text">
           <span class="achievement__title">{{ achievement.title }}</span>
           <p class="achievement__subtitle">{{ achievement.text }}</p>

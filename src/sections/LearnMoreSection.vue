@@ -64,7 +64,7 @@ onMounted(() => {
         trigger: '.learn-more.section',
         start: 'top 20%',
         onEnter: () => {
-          learnMoreBg.src = '/images/bg/heart-bg_animated.svg'
+          learnMoreBg.src = '/bg/heart-bg_animated.svg'
         },
       }
     })

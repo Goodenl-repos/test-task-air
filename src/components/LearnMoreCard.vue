@@ -3,7 +3,7 @@
   <div class="learn-more__box learn-more__card--tablet">
     <div ref="cardEl" class="learn-more__card" data-transform="-270 -10">
 
-    <img ref="cardImg" class="learn-more__img" :src="`/images/${card.imgName}.png`" :alt="card.imgName"  data-transform="-360, -20">
+    <img ref="cardImg" class="learn-more__img" :src="`/${card.imgName}.png`" :alt="card.imgName"  data-transform="-360, -20">
 
     <div class="learn-more__text">
       <h3>{{card.title}}</h3>
