@@ -1,6 +1,7 @@
 .intro
   padding-top: 4.2rem
   
+  
   &__main
     display: flex
     flex-direction: column
@@ -10,11 +11,14 @@
 
   &__title
     @extend .h1
-    max-width: 84.53rem
+    max-width: 87rem
     margin-left: auto
-    margin-right: -.5rem
+    margin-right: -2.5rem
 
     z-index: 1
+
+    > span
+      @extend .text-anima
 
   &__box
     display: flex
@@ -33,6 +37,9 @@
 
     z-index: 1
 
+    > p > span
+      @extend .text-anima
+
   &__bg
     width: 61.5rem
 
@@ -40,3 +47,49 @@
     left: 7.9rem
     
     z-index: 0
+
+  @include media(tablet)
+    padding-top: 4rem
+
+    &__main
+      margin-top: 19.2rem
+
+    &__title
+      margin-right: 0
+    
+    &__box
+      margin-top: 10.1rem
+      gap: 0 3.6rem
+
+    &__info
+      max-width: 56.3rem
+      margin-top: 4.253rem
+      line-height: 1.6
+
+    &__bg
+      width: 100.9rem
+      left: -1rem
+      top: -12rem
+  
+  @include media(mobile)
+    padding-top: 2.5rem
+
+    &__main
+      margin-top: 11.8rem
+    
+    &__box
+      margin-top: 11.9rem
+      gap: 3.8rem 0
+      flex-direction: column
+      align-items: center
+      padding: 0 .6rem
+
+    &__info
+      margin-top: 0
+      order: 2
+
+    &__bg
+      width: 60.8rem
+      left: -27rem
+      top: -9rem
+  

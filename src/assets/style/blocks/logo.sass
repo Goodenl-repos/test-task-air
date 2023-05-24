@@ -6,8 +6,11 @@
 
   cursor: pointer
 
+  z-index: 1000
+
   &__icon
     width: 100%
+    stroke: inherit
 
   &__title
     font-weight: 900
@@ -15,3 +18,13 @@
     line-height: 1.3
     letter-spacing: 0.04em
     text-transform: uppercase
+
+  @include media(mobile)
+    padding-top: .5rem
+    gap: 0 1.05rem
+
+    &__icon
+      width: 2.8rem
+
+    &__title
+      font-size: 1.742rem 

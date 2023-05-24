@@ -4,12 +4,12 @@
     position: absolute
     left: 0
     bottom: 5.1rem
+    z-index: 1
+    gap: 0 2rem
 
   &__item
     width: 10rem
-
-    > img
-      position: relative
-      left: -20rem
-
-      rotate: -45deg
+  
+  @include media(tablet)
+    &__list
+      scale: .9

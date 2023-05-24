@@ -21,6 +21,9 @@
   &__title
     max-width: 73.2rem
     @extend .h2
+  
+    > span
+      @extend .growFromOverflow
 
   &__subtitle
     color: rgba(var(--color-black-rgb), .7)
@@ -30,3 +33,25 @@
     position: absolute
     bottom: -59rem  
     right: -29.5rem
+
+  &__highlight
+    @extend .highlight
+    &:after
+      background-image: url('/images/bg/highlight-appeal.svg')
+
+  @include media(tablet)
+    margin-top: 13.5rem
+    padding-bottom: 34.8rem
+
+    &__title
+      max-width: 57rem
+
+    &__text
+      top: 0
+
+  @include media(mobile)
+    &__text
+      gap: 1.6rem
+
+    &__subtitle
+      font-size: 1.4rem

@@ -1,0 +1,42 @@
+.pseudo-line
+  content: ''
+  width: 2rem
+  height: 2px
+  background-color: var(--color-white)
+  position: absolute
+
+  @include media(mobile)
+    width: 1.5rem
+    height: 1px
+    background-color: none
+    border-bottom: .5px solid var(--color-white)
+  
+.burger-menu
+  display: flex
+  justify-content: center
+  align-items: center
+
+  border-radius: 100%
+  min-width: 6rem
+  min-height: 6rem
+  background-color: var(--color-black)
+
+  position: relative
+
+  &:after
+    @extend .pseudo-line
+    top: 2.5rem
+
+  &:before
+    @extend .pseudo-line
+    bottom: 2.5rem
+
+  @include media(mobile)
+    min-width: 4.3rem
+    min-height: 4.3rem
+
+    &__icon
+      width: 2.357rem
+
+    &__title
+      font-size: 1.742rem

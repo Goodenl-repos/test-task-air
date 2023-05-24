@@ -1,6 +1,6 @@
 <template>
   <!-- StarCard -->
-  <div class="star-card">
+  <div class="star-card ">
 
     <div class="star-card__star">
       <h4 class="star-card__name">

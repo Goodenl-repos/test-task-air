@@ -20,6 +20,21 @@
 
     transition: .3s all ease
 
+  &__card--tablet
+    @include media(tablet)
+      max-width: 50.4rem
+      max-height: 62.4rem
+
+      border-radius: 3.8rem
+      overflow: hidden
+
+      position: relative
+      cursor: none
+
+      transition: .3s all ease
+
+  &__card
+    
     &:after
       content: ''
 
@@ -31,17 +46,18 @@
       left: 0
       // @extend .after-darken
 
-    &:first-child
+  &__box
+    &:first-child > *
       --need-rotate: 4.72deg
       rotate: calc(var(--need-rotate) * -1)
 
       .learn-more__cursor
         rotate: var(--need-rotate)
       
-      img
+      > img
         transform: translate(-270px, -10px)
 
-    &:last-child
+    &:last-child > *
       --need-rotate: 3.68deg
       rotate: var(--need-rotate)
       top: 7.853rem
@@ -52,10 +68,10 @@
       .learn-more__text
         padding-bottom: 4.7rem
 
-      img
+      > img
         transform: translate(-360px, -20px)
     
-    &:hover
+    &:hover > *
       --need-rotate: 0deg
 
       &:first-child
@@ -67,7 +83,8 @@
   &__img
     height: 110%
     object-fit: cover
-    filter: brightness(0.75)
+    filter: brightness(0.7)
+      
 
   &__text
     display: flex
@@ -117,3 +134,103 @@
 
     &.show
       display: block
+
+  @include media(tablet)
+    margin-top: 16.4rem
+    padding-bottom: 0
+    margin-bottom: 13.4rem
+
+    &__row
+      padding-top: 0
+      align-items: center
+      gap: 4.8rem
+
+    &__card, &__card--tablet
+      max-width: 100%
+      max-height: 61rem
+      
+      border-radius: 3rem
+
+      cursor: pointer
+      --need-rotate: 0 !important
+      top: 0 !important
+
+    &__box
+      &:hover > *
+        transform: none !important
+
+      &:first-child > * > img
+        transform: translate(-200px, -70px)
+
+      &:last-child > * > img
+        transform: translate(-300px, -20px) scale(1.2)
+
+    &__text
+      > p
+        max-width: 35rem
+
+    &__button
+      position: absolute
+      right: 4.7rem
+      bottom: 6.1rem
+    
+  @include media(premobile)
+    &__row
+      flex-direction: column
+
+  @include media(mobile)
+    margin-top: 0
+    margin-bottom: 11rem
+
+    &__row
+      padding-top: 0
+
+    &__text
+      align-items: center
+      text-align: center
+      gap: .36rem 0
+
+      padding-right: 0
+      padding-left: 0
+      padding-bottom: 4.3rem
+
+      margin: 0 auto
+      max-width: 24rem
+      left: calc(50% - 12rem)
+
+      > h3
+        font-size: 4.8rem
+
+      > p
+        font-family: 'Inter'
+        font-weight: 400
+        font-size: 1.4rem
+        line-height: 1.6
+    
+    &__card, &__card--tablet
+      max-height: 51.7rem
+    
+    &__box
+      &:first-child > * > img
+        transform: translate(calc(-50% + 200px), -120px) scale(.9)
+      
+      &:last-child > * > img
+        transform: translate(calc(-50% + 200px), -80px) scale(1.05)
+
+    &__button
+      width: 100%
+      display: flex
+      justify-content: center
+      margin-top: 1.94rem
+      padding-top: 2.4rem
+      padding-bottom: 2.4rem
+
+      font-size: 1.6rem
+      color: var(--color-black)
+      
+      background-color: var(--color-accent)
+
+      position: relative
+      bottom: 0
+      right: 0
+      

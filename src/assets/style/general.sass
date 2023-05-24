@@ -1,29 +1,48 @@
 .page
   width: 100vw
   height: 100vh
-
   background-color: var(--color-white)
 
-  overflow: auto
-  overflow-x: hidden
-  scroll-snap-type: y mandatory
+  &-container
+    width: 100vw
+    height: 100%
 
-  &::-webkit-scrollbar
-    display: none
+    padding-bottom: 5rem
 
+    overflow: auto
+    overflow-x: hidden
+    // scroll-snap-type: y mandatory
+
+    &::-webkit-scrollbar
+      display: none
+  
+  @include media(tablet)
+    height: 100%
+
+    &--container
+      scroll-snap-type: none
 
 .container
-  max-width: calc(1272px + 24px * 2)
+  --padding: 6.2rem
+  max-width: calc(1272px + var(--padding) * 2)
   width: 100%
-  padding: 0 2.4rem
+  padding: 0 var(--padding)
   margin: 0 auto
+
+  @include media(mobile)
+    --padding: 2.4rem
 
 .section
   scroll-snap-align: start
-  height: 100vh
+  height: 90vh
   padding-bottom: 2.3rem
 
+  @include media(tablet)
+    height: 100%
+    padding-bottom: 0
+
 // extends
+// fonts
 .link
   font-family: 'Inter'
   font-size: 1.6rem
@@ -38,6 +57,14 @@
   font-size: 9rem
   color: var(--color-black)
 
+  @include media(tablet)
+    font-family: 'FK Grotesk'
+    font-size: 8rem
+  
+  @include media(mobile)
+    font-family: 'FK Grotesk'
+    font-size: 4.8rem
+
 .h2
   font-family: 'FK Grotesk'
   font-weight: 500
@@ -45,6 +72,10 @@
   font-size: 8rem
   color: var(--color-black)
 
+  @include media(mobile)
+    font-size: 4.8rem
+
+// components 
 .btn
   display: inline-flex
   border: none
@@ -62,7 +93,7 @@
     font-size: 2rem
     color: var(--color-dark)
 
-  &--header
+  &--primary
     @extend .link
 
     padding: 3rem 2.7rem
@@ -75,6 +106,18 @@
     line-height: 1.345
     white-space: pre
     letter-spacing: 0.04em
+
+  &--learn-more
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 6.8rem
+    min-height: 6.8rem
+
+    background-color: var(--color-accent)
+    border-radius: 100%
+
+// pseudos
 
 .after-darken
   content: ''
@@ -90,3 +133,77 @@
 .after-darken-gradient
   @extend .after-darken
   background: linear-gradient(355deg, rgba(var(--color-black-rgb),0.5) 0%, rgba(var(--color-black-rgb),0) 50%, rgba(var(--color-black-rgb),0.5) 100%)
+
+// media queries
+
+.hide--tablet
+  @include media(tablet)
+    display: none !important
+
+.show--tablet
+  display: none !important
+  @include media(tablet)
+    display: flex !important
+
+.hide--mobile
+  @include media(mobile)
+    display: none !important
+
+.show--mobile
+  display: none !important
+  @include media(mobile)
+    display: flex !important
+
+
+// animations
+.highlight
+  position: relative
+
+  &:after
+    content: ''
+    height: 100%
+    // width: calc(100% + 2rem)
+
+    position: absolute
+    left: -1rem
+    top: .5rem
+    z-index: -1
+ 
+    background-repeat: no-repeat
+    background-position: 50% 50%
+
+  &.anima
+    &:after
+      animation-name: growBg
+      animation-duration: 1s
+      animation-fill-mode: forwards  
+      animation-delay: 1s
+  
+  @include media(mobile)
+    &:after
+      display: none
+
+.text-anima
+  display: inline-block
+  margin-top: -1.5rem
+  width: 100%
+
+  @include media(tablet)
+    display: inline
+
+.growFromOverflow
+  @extend .text-anima
+  overflow: hidden
+
+.dark-screen
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+  background-color: var(--color-black)
+  z-index: 5
+
+  @include media(tablet)
+    display: none
