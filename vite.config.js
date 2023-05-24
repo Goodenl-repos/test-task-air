@@ -9,7 +9,6 @@ export default defineConfig({
       '@' : path.resolve(__dirname, './src')
     },
   },
-  plugins: [vue({
-    publicPath: process.env.NODE_ENV === "production" ? "/test-task-air/" : "/",
-  })],
+  base: process.env.NODE_ENV === "production" ? "/test-task-air/" : "/",
+  plugins: [vue()],
 })
